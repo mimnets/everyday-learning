@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: blueviolet;
+        }
+        h1:hover{
+            color: burlywood;
+            font-size: large;
+
+        }
+        h1::before{
+            content: "To ";
+            color: darkcyan;
+        }
+        h1::after{
+            content: " From";
+            color: darkgrey;
+        }
+        input:focus{
+            font-weight: 400;
+            font-size: larger;
+            color:burlywood;
+        }
+        li:nth-child(2n+1){
+            color:burlywood;
+        }
+        a:visited{
+            color: darkcyan;
+        }
+        body{
+            counter-reset: section;
+        }
+        p::before{
+            counter-increment: section;
+            content: "Crush " counter(section) ": ";
+        }
+    </style>
+</head>
+<body>
+    <h1>Pesudo Class</h1>
+    <h1>Normal Class</h1>
+    <h1>Abnormal Class</h1>
+    <input name="email" type="text">
+    <input name="password" type="text">
+    <ul>
+        <li>Monir</li>
+        <li>Ponir</li>
+        <li>Tonir</li>
+        <li>Gonir</li>
+        <li>Donir</li>
+        <li>Sazid</li>
+        <li>Tasmia</li>
+        <li>Limia</li>
+        <li>Samia</li>
+    </ul>
+    
+        <p>Monir</p>
+        <p>Ponir</p>
+        <p>Tonir</p>
+        <p>Gonir</p>
+        <p>Donir</p>
+        <p>Sazid</p>
+        <p>Tasmia</p>
+        <p>Limia</p>
+        <p>Samia</p>
+    
+    <a href="www.facebook.com">Facebook</a>
+    <a href="www.google.com">Google</a>
+</body>
+</html>
