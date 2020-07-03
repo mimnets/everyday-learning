@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            max-width: 1200px;
+            flex-direction: row;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .food{
+            border: 3px solid lightblue;
+            border-radius: 30px;
+            margin: 20px;
+            width: 350px;
+        }
+        img{
+            width: 100%;
+        }
+        @media (max-width: 760px) {
+            .container{
+                flex-direction: column;
+            }
+            .container .food{
+                background-color: lightgreen;
+            }
+        }
+        @media (min-width: 1200px){
+            .container .food{
+                background-color: lime;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="food">
+            <img src="images/foods.jpeg" alt="">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam veniam quis exercitationem fugiat praesentium perspiciatis odit magnam tempora ipsa cumque.</p>
+        </div>
+        <div class="food">
+            <img src="images/foods.jpeg" alt="">
+            <p>Odio, eos est delectus quis id asperiores illo quae quibusdam voluptatum pariatur, tempora vero animi eum impedit adipisci commodi a.</p>
+        </div>
+        <div class="food">
+            <img src="images/foods.jpeg" alt="">
+            <p>Repellat praesentium aspernatur tempore nemo pariatur nesciunt cum, corporis, delectus neque eligendi excepturi sequi perferendis. Sint omnis perferendis a voluptas?</p>
+        </div>
+        <div class="food">
+            <img src="images/foods.jpeg" alt="">
+            <p>Tenetur accusamus fuga officiis reprehenderit eaque, dolorum aliquid nesciunt illo. Ea enim at culpa ducimus, doloribus fugit animi exercitationem quia?</p>
+        </div>
+        <div class="food">
+            <img src="images/foods.jpeg" alt="">
+            <p>Qui veritatis ea dolorum, quasi hic provident atque accusantium animi, incidunt voluptatibus praesentium explicabo distinctio obcaecati, consectetur minus quos molestias.</p>
+        </div>
+        <div class="food">
+            <img src="images/foods.jpeg" alt="">
+            <p>Dignissimos natus architecto saepe ratione magni expedita doloribus consectetur, sit quae nemo in quas odit suscipit accusamus quidem asperiores minima?</p>
+        </div>
+    </div>
+</body>
+</html>
