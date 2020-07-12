@@ -36,8 +36,38 @@ console.log(total);
 var price1 = 25;
 var price2 = 35;
 
+price2++;
+price1--;
+
 var total = price2 % price1;
 
 console.log(total);
+
+var number = -5;
+
+var absoluteNumber = Math.abs(number);
+
+console.log(absoluteNumber);
+
+var roundNumber = 5.4436;
+var ceilNumber = 5.4436;
+var floorNumber = 5.4436;
+var randomNumber = Math.random() * 100;
+
+
+var numberRound = Math.round(roundNumber);
+var numbeCeil = Math.ceil(ceilNumber);
+var numberFloor = Math.floor(floorNumber);
+
+var numberRandom = Math.random()
+console.log(numberRound);
+console.log(numbeCeil);
+console.log(numberFloor);
+
+var result = Math.round(randomNumber);
+
+console.log(result);
+
+
 
 
