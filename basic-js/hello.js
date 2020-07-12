@@ -36,7 +36,7 @@ console.log(total);
 var price1 = 25;
 var price2 = 35;
 
-var total = price1 + price2;
+var total = price2 % price1;
 
 console.log(total);
 
