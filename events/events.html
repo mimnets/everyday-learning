@@ -10,10 +10,25 @@
     <h2 onclick="console.log('Hero Programmer')">Aother event</h2> <!--Got to inspect element in browser and click console, don't do this. try to use function instead-->
     <h1 onmousemove="handleClick()">Web Developer</h1>
     <button onclick="alert(34)">Click me</button>
+    <button id="second">click-me-1</button>
+    <button>click-me-2</button>
+    <button id="lastPerson">click-me-3</button>
     <script>
-        function handleClick(){
-            console.log('Hero Web Developer');
-        }
+
+        document.getElementById('lastPerson').addEventListener('click', function(){
+            document.body.style.color = 'tomato';
+        })
+        // function handClick(){
+        //     document.body.style.backgroundColor = 'tomato';
+        // } 
+        // // function handleClick(){
+        //     console.log('Hero Web Developer');
+        // }
+        // const secondButton = document.getElementById('second');
+
+
+        // secondButton.addEventListener('click',handClick)
+        // secondButton.onclick = handClick;
     </script>
 </body>
 </html>
