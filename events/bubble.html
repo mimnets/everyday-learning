@@ -25,7 +25,8 @@
            console.log('My list clicked'); 
         })
         document.getElementById('container').addEventListener('click', function(event){
-           console.log('Container clicked'); 
+           console.log('Container clicked');
+           event.stopPropagation();
         })
     </script>
 </body>
