@@ -5,6 +5,10 @@ function addNumbers(num1, num2){
         const num = arguments[i];
         sum = sum + num;
     }
+    function logInfo(message){
+        console.log(message);
+    }
+    logInfo('Good morning');
     return sum;
 }
 
