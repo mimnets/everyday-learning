@@ -26,10 +26,12 @@
         const userFromJSON = JSON.parse(userJSON);
         console.log(userFromJSON);
 
+        // fetch('https://jsonplaceholder.typicode.com/peoples')
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         // .then(json => console.log(json))
         .then(json => displayUser(json))
+        .catch(error => console.log(error));
 
         function displayUser(users){
             // console.log("users",users)
