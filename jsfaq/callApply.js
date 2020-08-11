@@ -4,8 +4,12 @@ const normalPerson = {
     salary: 16000,getFullName: function(){
         console.log(this.firstName, this.lastName);
     },
-    chargeBill: function(amount){
-        this.salary = this.salary - amount;
+    // chargeBill: function(amount){
+    //     this.salary = this.salary - amount;
+    //     return this.salary;
+    // }
+    chargeBill: function(amount, timps, tax){
+        this.salary = this.salary - amount - timps, - tax;
         return this.salary;
     }
 }
@@ -38,3 +42,12 @@ const frindlyPerson = {
 // friendlyChargeBill(300);
 // friendlyChargeBill(3400);
 // console.log(frindlyPerson.salary);
+
+// normalPerson.chargeBill.call(heroPerson, 900, 100, 50);
+// console.log(heroPerson.salary);
+
+// normalPerson.chargeBill.call(frindlyPerson, 500, 60, 30);
+// console.log(frindlyPerson.salary);
+
+normalPerson.chargeBill.apply(heroPerson, [500, 60, 30]);
+console.log(heroPerson.salary);
