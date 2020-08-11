@@ -30,7 +30,7 @@
         .then(response => response.json())
         // .then(json => console.log(json))
         .then(json => displayUser(json))
-    t
+        .catch(error => alert("Please try again later"));
 
         function displayUser(users){
             // console.log("users",users)
