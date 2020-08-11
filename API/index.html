@@ -9,28 +9,62 @@
     <h1>JSON</h1>
     <h2>JavaScript Object Notation</h2>
     <ul id="users-container"></ul>
+    <input id="title" type="text" placeholder="title">
+    <br>
+    <input id="body-content" type="text" placeholder="post er main jinis">
+    <br>
+    <button id="submit">Submit</button>
     <script>
-        const user = {
-            id: 245, 
-            name:"Monirul", 
-            lover: {
-                name: ["Moriom", "Maria","Urmi"],
-                favFood: "Kola"
-            },
-            friendsAge: [12,34,23],
-            friends: ["Jamal", "Kamal","Milon"]
-        };
-        const userJSON = JSON.stringify(user);
-        console.log(userJSON);
+        // const user = {
+        //     id: 245, 
+        //     name:"Monirul", 
+        //     lover: {
+        //         name: ["Moriom", "Maria","Urmi"],
+        //         favFood: "Kola"
+        //     },
+        //     friendsAge: [12,34,23],
+        //     friends: ["Jamal", "Kamal","Milon"]
+        // };
+        // const userJSON = JSON.stringify(user);
+        // console.log(userJSON);
 
-        const userFromJSON = JSON.parse(userJSON);
-        console.log(userFromJSON);
+        // const userFromJSON = JSON.parse(userJSON);
+        // console.log(userFromJSON);
 
-        fetch('https://jsonplaceholder.typicode.com/users')
+        // // fetch('https://jsonplaceholder.typicode.com/peoples')
+        // fetch('https://jsonplaceholder.typicode.com/users')
+        // .then(response => response.json())
+        // // .then(json => console.log(json))
+
+        // const postInfo = { title: 'foooooo', body: 'barrrrr', userId: 1}
+        document.getElementById("submit").addEventListener("click", function(){
+            const title = document.getElementById("title").value;
+            const bodyContent = document.getElementById("body-content").value;
+            const postServer = { title: title, bodyContent};
+
+            nowPostToServer(postServer);
+        })
+
+        function nowPostToServer(postInfo){
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify(postInfo),
+            headers: {
+            "Content-type": "application/json; charset=UTF-8"
+            }
+        })
         .then(response => response.json())
+<<<<<<< HEAD
         // .then(json => console.log(json))
         .then(json => displayUser(json))
         .catch(error => alert("Please try again later"));
+=======
+        .then(data => console.log(data));
+        }
+
+        // .then(json => displayUser(json))
+        // .catch(error => console.log(error));
+>>>>>>> 84d61980020a1862d2d8afa30bedc03b24392951
 
         function displayUser(users){
             // console.log("users",users)
