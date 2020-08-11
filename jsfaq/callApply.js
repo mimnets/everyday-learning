@@ -27,14 +27,14 @@ const frindlyPerson = {
 }
 // normalPerson.chargeBill()
 
-const heroBillCharge = normalPerson.chargeBill.bind(heroPerson);
-heroBillCharge(2000);
-heroBillCharge(3000);
-console.log(heroPerson.salary);
-console.log(normalPerson.salary);
+// const heroBillCharge = normalPerson.chargeBill.bind(heroPerson);
+// heroBillCharge(2000);
+// heroBillCharge(3000);
+// console.log(heroPerson.salary);
+// console.log(normalPerson.salary);
 
-const friendlyChargeBill = normalPerson.chargeBill.bind(frindlyPerson);
+// const friendlyChargeBill = normalPerson.chargeBill.bind(frindlyPerson);
 
-friendlyChargeBill(300);
-friendlyChargeBill(3400);
-console.log(frindlyPerson.salary);
+// friendlyChargeBill(300);
+// friendlyChargeBill(3400);
+// console.log(frindlyPerson.salary);
