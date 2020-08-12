@@ -20,4 +20,5 @@ function Person1(firstName, lastName, salary){
     this.salary = salary;
 }
 
-const oldPerson = 
+const oldPerson = new Person1('Monirul','Islam', 45000);
+console.log(oldPerson);
